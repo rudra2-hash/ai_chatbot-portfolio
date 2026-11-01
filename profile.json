@@ -1,0 +1,44 @@
+{
+    "name": "Rudra Behl",
+    "email": "behlrudra90@gmail.com",
+    "phone": "6284147687",
+    "total_experience_years": null,
+    "skills": [
+        "Python",
+        "C++",
+        "SQL",
+        "Machine Learning",
+        "Data Science",
+        "LLMs",
+        "AI Agents",
+        "Prompt Engineering",
+        "Docker",
+        "Kubernetes",
+        "Cloud Fundamentals",
+        "DSA",
+        "Problem Solving",
+        "Git",
+        "GitHub",
+        "Jupyter Notebook",
+        "VS Code",
+        "Artificial Intelligence",
+        "Generative AI",
+        "Software Development",
+        "Backend Systems",
+        "System Design"
+    ],
+    "experiences": [],
+    "education": [
+        "Bachelor of Computer Applications (BCA Honours), DAV College, Guru Nanak Dev University (GNDU), 2024 – 2027"
+    ],
+    "projects": [
+        "AI Resume Analyzer using LLMs",
+        "Machine Learning Projects",
+        "AI Travel Planner Assistant",
+        "DSA Practice Repository"
+    ],
+    "certifications": [
+        "Machine Learning Internship Certification – CodSoft",
+        "Machine Learning Virtual Internship – Intercertify"
+    ]
+}
