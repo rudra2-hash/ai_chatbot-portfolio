@@ -461,3 +461,14 @@ body {
     }
 }
  
+
+.server-banner {
+    background: #fff3cd;
+    color: #664d03;
+    padding: 10px 14px;
+    text-align: center;
+    font-size: 14px;
+}
+.server-banner[hidden] {
+    display: none;
+}

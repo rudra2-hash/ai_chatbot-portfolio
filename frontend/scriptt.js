@@ -1,3 +1,29 @@
+const API_URL = "https://ai-chatbot-portfolio-al7h.onrender.com";
+const serverBanner = document.getElementById("serverBanner");
+let serverReady = false;
+
+
+setTimeout(() => {
+    if (!serverReady) serverBanner.hidden = false;
+}, 1500);
+
+async function waitForServer() {
+    while (true) {
+        try {
+            const res = await fetch(`${API_URL}/health`);
+            if (res.ok) break;
+        } catch (e) {
+            
+        }
+        await new Promise(r => setTimeout(r, 4000));
+    }
+    serverReady = true;
+    serverBanner.hidden = true;
+}
+
+waitForServer();
+
+
 const userInput = document.getElementById("userInput");
 
 const sessionid = crypto.randomUUID();
@@ -81,7 +107,7 @@ chatForm.addEventListener("submit", async function (event) {
 
     
     try {
-        const response = await fetch("http://127.0.0.1:8000/hello", {
+        const response = await fetch("https://ai-chatbot-portfolio-al7h.onrender.com/hello", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ query: message ,session_key: sessionid})
