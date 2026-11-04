@@ -56,6 +56,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.api_route("/health", methods=["GET", "HEAD"])
+def health():
+    return {"status": "ok"}
+
 sessions = {}
 
 
