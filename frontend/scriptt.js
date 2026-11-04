@@ -1,7 +1,7 @@
 const userInput = document.getElementById("userInput");
 
 const sessionid = crypto.randomUUID();
-console.log(sessionid);
+// console.log(sessionid);
 
 function addMessage(text, sender) {
 

@@ -20,29 +20,30 @@ if not my_api_key:
 client=Groq(api_key=my_api_key)
 model="openai/gpt-oss-120b"
 
-class Experience(BaseModel):
-    company: str | None = None
-    role: str | None = None
-    duration: str | None = None
-    description: str | None = None
-    skills_used: list[str] = []
+# class Experience(BaseModel):
+#     company: str | None = None
+#     role: str | None = None
+#     duration: str | None = None
+#     description: str | None = None
+#     skills_used: list[str] = []
 
-class Resume(BaseModel):
-    name: str | None = None
-    email: str | None = None
-    phone: str | None = None
+# class Resume(BaseModel):
+#     name: str | None = None
+#     email: str | None = None
+#     phone: str | None = None
 
-    total_experience_years: float | None = None
+#     total_experience_years: float | None = None
 
-    skills: list[str] = []
-    experiences: list[Experience] = []
-    education: list[str] = []
-    projects: list[str] = []
-    certifications: list[str] = []
+#     skills: list[str] = []
+#     experiences: list[Experience] = []
+#     education: list[str] = []
+#     projects: list[str] = []
+#     certifications: list[str] = []
 
 with open("profile.json", "r") as f:
-    data = json.load(f)
-profile = Resume(**data)
+    profile = json.load(f)
+
+profile_context = json.dumps(profile, indent=4)
 
 
 
@@ -67,8 +68,10 @@ system_prompt = f"""
 
 You are my professional assistant.
 
+Your tone should be polite and frinedly. 
+
 Here is infromation about me:
-{profile.model_dump_json(indent=4)}
+{profile_context}
 
 You have to answer questions exactly based on this profile.
 Do not invent new information.
@@ -76,7 +79,7 @@ Do not lie , be honest in the conversation.
 Do not sugarcoat things about me.
 If you dont know the answer simply return "i don't know".
 
-
+Simple questions like "whats your name"? should not be ignored by you. You have to answer even small answers based on my information.
 
 Asnwer the questions briefly according to the profile.
 
@@ -91,6 +94,13 @@ If the user ask personal questions or irrelavant questions, return "out of conte
 For eg: 
 user : 'tell me about your girlfriend?
 your reply : 'out of context'
+
+When the user asks for links like "whast your github link" , you should give that link without any story. DO NOT invent links
+
+The user can  chat about my projects , when user chats about my projects answer only on the skills or stack i have worked actually.
+
+If the suer asks for my project link give the link , if any project is live and user asks for live link than give that live link or github link accordingly
+
 
 Do not overexplain things , give your reply to the point about my information.
 

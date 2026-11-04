@@ -1,44 +1,96 @@
 {
+  "candidate": {
     "name": "Rudra Behl",
+    "headline": "Software Developer (Backend-focused) | LLMs, Machine Learning & Web Development",
     "email": "behlrudra90@gmail.com",
-    "phone": "6284147687",
-    "total_experience_years": null,
-    "skills": [
-        "Python",
-        "C++",
-        "SQL",
-        "Machine Learning",
-        "Data Science",
-        "LLMs",
-        "AI Agents",
-        "Prompt Engineering",
-        "Docker",
-        "Kubernetes",
-        "Cloud Fundamentals",
-        "DSA",
-        "Problem Solving",
-        "Git",
-        "GitHub",
-        "Jupyter Notebook",
-        "VS Code",
-        "Artificial Intelligence",
-        "Generative AI",
-        "Software Development",
-        "Backend Systems",
-        "System Design"
+    "phone": "+91 6284147687",
+    "location": "Jalandhar, Punjab, India",
+    "links": {
+      "github": "https://github.com/rudra2-hash",
+      "linkedin": "https://www.linkedin.com/in/rudra-behl-14b244423"
+    }
+  },
+  "summary": "BCA student focused on software development with a backend emphasis. Builds full-stack projects and LLM-powered applications, with working knowledge of AI agents, machine learning and web development.",
+  "career_priorities": [
+    "Software development",
+    "AI / LLMs",
+    "Backend development",
+    "Machine learning"
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Computer Applications (BCA)",
+      "institution": "DAV College, Jalandhar",
+      "university": "Guru Nanak Dev University",
+      "status": "Currently in 5th semester",
+      "graduation_year": 2027
+    }
+  ],
+  "skills": {
+    "languages": ["C++", "JavaScript", "Python"],
+    "backend": ["Node.js", "Express", "FastAPI", "Crow (C++)"],
+    "frontend": ["HTML", "CSS", "JavaScript"],
+    "databases": ["PostgreSQL (via libpqxx in C++)"],
+    "ai_llm": [
+      "LLM API integration (Groq)",
+      "RAG (Qdrant)",
+      "AI agents (giving tools to agents)",
+      "AI chatbots"
     ],
-    "experiences": [],
-    "education": [
-        "Bachelor of Computer Applications (BCA Honours), DAV College, Guru Nanak Dev University (GNDU), 2024 – 2027"
-    ],
-    "projects": [
-        "AI Resume Analyzer using LLMs",
-        "Machine Learning Projects",
-        "AI Travel Planner Assistant",
-        "DSA Practice Repository"
-    ],
-    "certifications": [
-        "Machine Learning Internship Certification – CodSoft",
-        "Machine Learning Virtual Internship – Intercertify"
+    "dsa": ["Trees", "Graphs", "Other core topics"],
+    "other": [
+      "Connecting backends to frontends",
+      "Payment gateway integration (Razorpay, test mode)",
+      "Deployment (Render)"
     ]
+  },
+  "projects": [
+    {
+      "name": "Razorpay Payment Gateway Store",
+      "type": "Full-stack demo project",
+      "description": "Demo e-commerce website where users browse products, add to cart and pay through Razorpay in test mode.",
+      "features": [
+        "Product listing and cart",
+        "Checkout page that calls the backend",
+        "Razorpay payment flow in test mode"
+      ],
+      "how_it_works": "The HTML/CSS/JS frontend calls the Express backend, which handles the Razorpay payment flow.",
+      "my_role": "Built both the frontend and backend, and deployed them.",
+      "challenges_solved": "the main problem was signature verification of the payment , i solved that with HMAC.",
+      "tech_stack": ["Node.js", "Express", "HTML", "CSS", "JavaScript", "Razorpay"],
+      "status": "Live (backend on Render)",
+      "live_url": "https://razorpay-project-demo.onrender.com",
+      "github": "https://github.com/rudra2-hash/razorpay-project-demo-"
+    },
+    {
+      "name": "Student Result System (Database Management)",
+      "type": "Full-stack project",
+      "description": "Student result system where marks, subjects and roll numbers are stored in a database. The user selects a class and roll number on the frontend, and the backend calculates and returns the result.",
+      "features": [
+        "Subjects, roll numbers and marks stored in PostgreSQL",
+        "Class and roll number selection on the frontend",
+        "Result calculation done in the backend"
+      ],
+      "how_it_works": "Frontend (HTML/CSS/JS) sends the selection to the C++ Crow backend, which queries PostgreSQL through libpqxx, calculates the result and returns it to the frontend.",
+      "my_role": "Built the backend, database layer and frontend.",
+      "tech_stack": ["C++", "Crow", "libpqxx", "PostgreSQL", "HTML", "CSS", "JavaScript"],
+      "status": "Completed",
+      "github": "https://github.com/rudra2-hash/student-database-management"
+    },
+    {
+      "name": "Portfolio AI Chatbot",
+      "type": "LLM application",
+      "description": "AI chatbot on my portfolio that answers questions about my background, skills and projects.",
+      "features": [
+        "Answers questions about my resume, skills and projects",
+        "Shares project links when relevant"
+      ],
+      "how_it_works": "The HTML/CSS/JS frontend sends questions to a FastAPI backend, which calls the Groq LLM with my resume data as context.",
+      "my_role": "Built the backend, frontend and LLM integration.",
+      "planned_features": [
+        "PDF upload of a job description that gets matched against my portfolio with an honest fit assessment"
+      ],
+      "tech_stack": ["Groq LLM", "Python", "FastAPI", "HTML", "CSS", "JavaScript"]
+    }
+  ]
 }
