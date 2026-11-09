@@ -90,7 +90,10 @@
       "planned_features": [
         "PDF upload of a job description that gets matched against my portfolio with an honest fit assessment"
       ],
-      "tech_stack": ["Groq LLM", "Python", "FastAPI", "HTML", "CSS", "JavaScript"]
+      "tech_stack": ["Groq LLM", "Python", "FastAPI", "HTML", "CSS", "JavaScript"],
+      "status": "Live (backend on Render)",
+      "live_url": "https://ai-chatbot-portfolio-1.onrender.com",
+      "github": "https://github.com/rudra2-hash/ai_chatbot-portfolio"
     }
   ]
 }
